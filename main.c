@@ -34,7 +34,7 @@ int main() {
         fread(buf, sizeof(uint8_t), length, fp);
 
         PLImage out;
-        plLoadFromMemory(buf, length, "bmp", &out);
+        plLoadImageFromMemory(buf, length, "bmp", &out);
 
         char path[PL_SYSTEM_MAX_PATH];
         snprintf(path, sizeof(path), "out/%d.bmp", i);
